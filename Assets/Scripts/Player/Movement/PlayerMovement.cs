@@ -76,8 +76,7 @@ public class PlayerMovement : MonoBehaviour
         SpeedControl();
         StateHandler();
 
-        if (isCrouching)
-            moveSpeed = crouchSpeed;
+
 
         //Debug.Log("Velocity: " + rb.velocity);
 
@@ -138,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Mode - Sprinting
-        if (grounded && Input.GetKey(sprintKey))
+        else if (grounded && Input.GetKey(sprintKey))
         {
             state = MovementState.sprinting;
             moveSpeed = sprintSpeed;
@@ -173,7 +172,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // on ground
-        if(grounded)
+        else if(grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
 
         // in air
