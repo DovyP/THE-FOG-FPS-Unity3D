@@ -996,7 +996,6 @@ MonoBehaviour:
   airMultiplier: 0.4
   crouchSpeed: 3.5
   crouchYScale: 0.5
-  startYScale: 0
   jumpKey: 32
   sprintKey: 304
   crouchKey: 306
@@ -1004,6 +1003,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  maxSlopeAngle: 40
   orientation: {fileID: 893663720}
   state: 0
 --- !u!1 &1222175844
