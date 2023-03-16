@@ -835,7 +835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8878749227639864533}
   - component: {fileID: 2032178657480530133}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CQBM4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,12 +870,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93873ab8745b1e24fa6a7feef2df95e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwForce: 0
-  throwExtraForce: 0
-  rotationForce: 0
-  weaponGfxLayer: 0
-  weaponGfx: {fileID: 0}
-  gfxCollider: {fileID: 0}
+  throwForce: 5
+  throwExtraForce: 11
+  rotationForce: 120
+  weaponGfxLayer: 11
+  weaponGfx: {fileID: 140623069536288807}
+  gfxColliders:
+  - {fileID: 6491549930666250792}
+  - {fileID: 575897511445122522}
+  - {fileID: 3079793326757747547}
+  - {fileID: 9217626094411734306}
+  - {fileID: 4885880038947070051}
+  - {fileID: 7774519445829109037}
+  - {fileID: 2192756716592699531}
+  - {fileID: 9067891790983857840}
+  - {fileID: 2928272218736070094}
+  - {fileID: 4180016543474029712}
 --- !u!1 &7796710712811043418
 GameObject:
   m_ObjectHideFlags: 0
