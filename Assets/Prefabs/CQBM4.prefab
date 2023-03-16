@@ -873,6 +873,12 @@ MonoBehaviour:
   throwForce: 5
   throwExtraForce: 11
   rotationForce: 120
+  maxAmmo: 30
+  shotsPerSecond: 20
+  reloadSpeed: 1.25
+  hitForce: 3.5
+  range: 20
+  tapable: 0
   weaponGfxLayer: 8
   weaponGfxs:
   - {fileID: 140623069536288807}

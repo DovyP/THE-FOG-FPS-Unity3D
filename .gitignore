@@ -73,3 +73,6 @@ crashlytics-build.properties
 .vscode/
 Assets/Thirdparty/
 Assets/Models/
+Assets/TextMesh Pro/Fonts.meta
+Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf
+Assets/TextMesh Pro/
