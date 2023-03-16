@@ -873,8 +873,19 @@ MonoBehaviour:
   throwForce: 5
   throwExtraForce: 11
   rotationForce: 120
-  weaponGfxLayer: 11
-  weaponGfx: {fileID: 140623069536288807}
+  weaponGfxLayer: 8
+  weaponGfxs:
+  - {fileID: 140623069536288807}
+  - {fileID: 2155277816150080449}
+  - {fileID: 424205899174369566}
+  - {fileID: 485999198360080146}
+  - {fileID: 4751861944407901192}
+  - {fileID: 2843736933174696855}
+  - {fileID: 5209267523458624383}
+  - {fileID: 2585913212120136440}
+  - {fileID: 7796710712811043418}
+  - {fileID: 714187269536853266}
+  - {fileID: 7840828444575976632}
   gfxColliders:
   - {fileID: 6491549930666250792}
   - {fileID: 575897511445122522}
