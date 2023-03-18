@@ -2111,7 +2111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a05133b557ec244aafb49dbe5c13b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupRange: 2
+  pickupRange: 20
   pickupRadius: 0.25
   weaponLayer: 7
   swaySize: 0.004

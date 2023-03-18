@@ -86,7 +86,7 @@ public class Weapon : MonoBehaviour {
     private void Shoot() {
         transform.localPosition -= new Vector3(0, 0, kickbackForce);
         if (!Physics.Raycast(_playerCamera.position, _playerCamera.forward, out var hitInfo, range)) return;
-        Instantiate(onHitFX, hitInfo.point + (hitInfo.normal * .01f), Quaternion.FromToRotation(Vector3.up, hitInfo.normal));
+        Instantiate(onHitFX, hitInfo.point + (hitInfo.normal * .005f), Quaternion.FromToRotation(Vector3.up, hitInfo.normal));
         var rb = hitInfo.transform.GetComponent<Rigidbody>();
         if (rb == null) return;
         
