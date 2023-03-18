@@ -743,7 +743,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunData: {fileID: 11400000, guid: e532d518def5fa44bb599c950b352174, type: 2}
-  muzzle: {fileID: 810575738}
+  playerCam: {fileID: 963194228}
+  hitFX: {fileID: 851759031513078466, guid: 447290c6aee5dfe40ab4380f733d2062, type: 3}
 --- !u!1 &893663719
 GameObject:
   m_ObjectHideFlags: 0
