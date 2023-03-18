@@ -81,14 +81,14 @@ public class Weapon : MonoBehaviour {
             _ammo--;
             _ammoText.text = _ammo + " / " + maxAmmo;
             Shoot();
+            muzzleflash.Activate();
             StartCoroutine(_ammo <= 0 ? ReloadCooldown() : ShootingCooldown());
         }
     }
 
     private void Shoot() {
-        transform.localPosition -= new Vector3(0, 0, kickbackForce);
+        //transform.localPosition -= new Vector3(0, 0, kickbackForce);
         if (!Physics.Raycast(_playerCamera.position, _playerCamera.forward, out var hitInfo, range)) return;
-        muzzleflash.Activate();
         Instantiate(onHitFX, hitInfo.point + (hitInfo.normal * .005f), Quaternion.FromToRotation(Vector3.up, hitInfo.normal));
         var rb = hitInfo.transform.GetComponent<Rigidbody>();
         if (rb == null) return;

@@ -33,8 +33,8 @@ public class WeaponManager : MonoBehaviour {
 
         if (_isWeaponHeld) {
             var mouseDelta = -new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-            swayHolder.localPosition = Vector3.Lerp(swayHolder.localPosition, Vector3.zero, swaySmooth * Time.deltaTime);
-            swayHolder.localPosition += (Vector3) mouseDelta * swaySize;
+            //swayHolder.localPosition = Vector3.Lerp(swayHolder.localPosition, Vector3.zero, swaySmooth * Time.deltaTime);
+            //swayHolder.localPosition += (Vector3) mouseDelta * swaySize;
             
             if (Input.GetKeyDown(KeyCode.Q)) {
                 _heldWeapon.Drop(playerCamera);
