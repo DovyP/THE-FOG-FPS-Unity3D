@@ -29,6 +29,7 @@ public class Weapon : MonoBehaviour {
     [SerializeField] private GameObject[] weaponGfxs;
     [SerializeField] private Collider[] gfxColliders;
     [SerializeField] private GameObject onHitFX;
+    [SerializeField] private MuzzleFlash muzzleflash;
 
     private float _rotationTime;
     private float _time;
@@ -47,6 +48,7 @@ public class Weapon : MonoBehaviour {
         _rb = gameObject.AddComponent<Rigidbody>();
         _rb.mass = 0.1f;
         _ammo = maxAmmo;
+        muzzleflash = GetComponent<MuzzleFlash>();
     }
 
     private void Update() {
@@ -86,6 +88,7 @@ public class Weapon : MonoBehaviour {
     private void Shoot() {
         transform.localPosition -= new Vector3(0, 0, kickbackForce);
         if (!Physics.Raycast(_playerCamera.position, _playerCamera.forward, out var hitInfo, range)) return;
+        muzzleflash.Activate();
         Instantiate(onHitFX, hitInfo.point + (hitInfo.normal * .005f), Quaternion.FromToRotation(Vector3.up, hitInfo.normal));
         var rb = hitInfo.transform.GetComponent<Rigidbody>();
         if (rb == null) return;
@@ -133,6 +136,7 @@ public class Weapon : MonoBehaviour {
         if (!_held) return;
         _rb = gameObject.AddComponent<Rigidbody>();
         _rb.mass = 0.1f;
+        //_rb.RigidbodyInterpolation.Interpolate;
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
         var forward = playerCamera.forward;
