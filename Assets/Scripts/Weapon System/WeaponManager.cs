@@ -4,23 +4,23 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class WeaponManager : MonoBehaviour {
-    public float pickupRange;
-    public float pickupRadius;
+    [SerializeField] private float pickupRange;
+    [SerializeField] private float pickupRadius;
 
-    public int weaponLayer;
-    public float swaySize;
-    public float swaySmooth;
+    [SerializeField] private int weaponLayer;
+    [SerializeField] private float swaySize;
+    [SerializeField] private float swaySmooth;
 
-    public float defaultFov;
-    public float scopedFov;
-    public float fovSmooth;
+    [SerializeField] private float defaultFov;
+    [SerializeField] private float scopedFov;
+    [SerializeField] private float fovSmooth;
 
-    public Transform weaponHolder;
-    public Transform playerCamera;
-    public Transform swayHolder;
-    public TMP_Text ammoText;
-    public Camera[] playerCams;
-    public Image crosshairImage;
+    [SerializeField] private Transform weaponHolder;
+    [SerializeField] private Transform playerCamera;
+    [SerializeField] private Transform swayHolder;
+    [SerializeField] private TMP_Text ammoText;
+    [SerializeField] private Camera[] playerCams;
+    [SerializeField] private Image crosshairImage;
 
     private bool _isWeaponHeld;
     private Weapon _heldWeapon;

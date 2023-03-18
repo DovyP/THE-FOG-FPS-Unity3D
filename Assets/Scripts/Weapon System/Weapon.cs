@@ -6,28 +6,28 @@ using Random = UnityEngine.Random;
 
 public class Weapon : MonoBehaviour {
     [Header("Throwing")]
-    public float throwForce;
-    public float throwExtraForce;
-    public float rotationForce;
+    [SerializeField] private float throwForce;
+    [SerializeField] private float throwExtraForce;
+    [SerializeField] private float rotationForce;
 
     [Header("Pickup")]
-    public float animTime;
+    [SerializeField] private float animTime;
 
     [Header("Shooting")]
-    public int maxAmmo;
-    public int shotsPerSecond;
-    public float reloadSpeed;
-    public float hitForce;
-    public float range;
-    public bool tapable;
-    public float kickbackForce;
-    public float resetSmooth;
-    public Vector3 scopePos;
+    [SerializeField] private int maxAmmo;
+    [SerializeField] private int shotsPerSecond;
+    [SerializeField] private float reloadSpeed;
+    [SerializeField] private float hitForce;
+    [SerializeField] private float range;
+    [SerializeField] private bool tapable;
+    [SerializeField] private float kickbackForce;
+    [SerializeField] private float resetSmooth;
+    [SerializeField] private Vector3 scopePos;
 
     [Header("Data")]
-    public int weaponGfxLayer;
-    public GameObject[] weaponGfxs;
-    public Collider[] gfxColliders;
+    [SerializeField] private int weaponGfxLayer;
+    [SerializeField] private GameObject[] weaponGfxs;
+    [SerializeField] private Collider[] gfxColliders;
 
     private float _rotationTime;
     private float _time;

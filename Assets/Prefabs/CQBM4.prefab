@@ -248,14 +248,14 @@ MonoBehaviour:
   animTime: 0.3
   maxAmmo: 25
   shotsPerSecond: 20
-  reloadSpeed: 1.25
+  reloadSpeed: 0.5
   hitForce: 3.5
   range: 20
   tapable: 0
   kickbackForce: 0.075
   resetSmooth: 11.75
   scopePos: {x: -0.69, y: 0.05, z: 0.3}
-  weaponGfxLayer: 8
+  weaponGfxLayer: 7
   weaponGfxs:
   - {fileID: 5779270225101109463}
   - {fileID: 5489489410266006321}
