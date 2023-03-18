@@ -28,6 +28,7 @@ public class Weapon : MonoBehaviour {
     [SerializeField] private int weaponGfxLayer;
     [SerializeField] private GameObject[] weaponGfxs;
     [SerializeField] private Collider[] gfxColliders;
+    [SerializeField] private GameObject onHitFX;
 
     private float _rotationTime;
     private float _time;
@@ -85,8 +86,10 @@ public class Weapon : MonoBehaviour {
     private void Shoot() {
         transform.localPosition -= new Vector3(0, 0, kickbackForce);
         if (!Physics.Raycast(_playerCamera.position, _playerCamera.forward, out var hitInfo, range)) return;
+        Instantiate(onHitFX, hitInfo.point + (hitInfo.normal * .01f), Quaternion.FromToRotation(Vector3.up, hitInfo.normal));
         var rb = hitInfo.transform.GetComponent<Rigidbody>();
         if (rb == null) return;
+        
         rb.velocity += _playerCamera.forward * hitForce;
     }
 

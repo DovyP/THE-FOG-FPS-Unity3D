@@ -280,6 +280,7 @@ MonoBehaviour:
   - {fileID: 6354242349607065059}
   - {fileID: 6228406523604472452}
   - {fileID: 5779270225101109460}
+  onHitFX: {fileID: 6648834161670884361, guid: 0aec38a3edee26049a94bc05b5d9897d, type: 3}
 --- !u!1 &4211769309111811155
 GameObject:
   m_ObjectHideFlags: 0
