@@ -539,7 +539,7 @@ MonoBehaviour:
   kickbackForce: 0.075
   resetSmooth: 11.75
   scopePos: {x: -0.69, y: 0.05, z: 0.3}
-  weaponGfxLayer: 7
+  weaponGfxLayer: 8
   weaponGfxs:
   - {fileID: 5779270225101109463}
   - {fileID: 5489489410266006321}
