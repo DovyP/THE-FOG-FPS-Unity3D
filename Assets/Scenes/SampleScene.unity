@@ -366,10 +366,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef9d37e1fdfe3c4a9fc048edb655949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 6
+  rotationSpeed: 3
   returnSpeed: 25
-  RecoilRotation: {x: 1, y: 1, z: 6}
-  RecoilRotationAiming: {x: 1, y: 1, z: 6}
+  RecoilRotation: {x: 0.5, y: 2, z: 6}
+  RecoilRotationAiming: {x: 0.5, y: 2, z: 6}
   aiming: 0
 --- !u!1 &240157130
 GameObject:
@@ -1923,7 +1923,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1222175846}
   - component: {fileID: 1222175845}
-  - component: {fileID: 1222175847}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -1960,23 +1959,6 @@ Transform:
   m_Father: {fileID: 1949067786}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1222175847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222175844}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eef9d37e1fdfe3c4a9fc048edb655949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 6
-  returnSpeed: 25
-  RecoilRotation: {x: 6, y: 1, z: 6}
-  RecoilRotationAiming: {x: 3, y: 1, z: 6}
-  aiming: 0
 --- !u!54 &1226145765
 Rigidbody:
   m_ObjectHideFlags: 0
