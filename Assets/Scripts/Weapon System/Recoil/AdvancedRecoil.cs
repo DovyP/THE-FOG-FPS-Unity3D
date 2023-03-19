@@ -27,7 +27,7 @@ public class AdvancedRecoil : MonoBehaviour
 	{
 		currentRotation = Vector3.Lerp(currentRotation, Vector3.zero, returnSpeed * Time.deltaTime);
 		Rot = Vector3.Slerp(Rot, currentRotation, rotationSpeed * Time.fixedDeltaTime);
-		transform.rotation = Quaternion.Euler(Rot);
+		transform.localRotation = Quaternion.Euler(Rot);
 	}
 
 	public void Fire()
