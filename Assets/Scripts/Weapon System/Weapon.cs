@@ -30,6 +30,7 @@ public class Weapon : MonoBehaviour {
     [SerializeField] private Collider[] gfxColliders;
     [SerializeField] private GameObject onHitFX;
     [SerializeField] private MuzzleFlash muzzleflash;
+    [SerializeField] private AdvancedRecoil advancedRecoil;
 
     private float _rotationTime;
     private float _time;
@@ -49,6 +50,7 @@ public class Weapon : MonoBehaviour {
         _rb.mass = 0.1f;
         _ammo = maxAmmo;
         muzzleflash = GetComponent<MuzzleFlash>();
+        advancedRecoil = GameObject.FindObjectOfType<AdvancedRecoil>(); // change later, testing purposes only
     }
 
     private void Update() {
@@ -88,6 +90,7 @@ public class Weapon : MonoBehaviour {
 
     private void Shoot() {
         transform.localPosition -= new Vector3(0, 0, kickbackForce);
+        advancedRecoil.Fire();
         if (!Physics.Raycast(_playerCamera.position, _playerCamera.forward, out var hitInfo, range)) return;
         Instantiate(onHitFX, hitInfo.point + (hitInfo.normal * .005f), Quaternion.FromToRotation(Vector3.up, hitInfo.normal));
         var rb = hitInfo.transform.GetComponent<Rigidbody>();
