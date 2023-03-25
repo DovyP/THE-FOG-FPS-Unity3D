@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private float desiredMoveSpeed;
     private float lastDesiredMoveSpeed;
 
+    [SerializeField] private float speedIncreaseMultiplier;
+    [SerializeField] private float slopeIncreaseMultiplier;
+
     [SerializeField] private float groundDrag;
 
     [Header("Jumping")]
@@ -197,7 +200,17 @@ public class PlayerMovement : MonoBehaviour
         while (time < difference)
         {
             moveSpeed = Mathf.Lerp(startValue, desiredMoveSpeed, time / difference);
-            time += Time.deltaTime;
+
+            if (OnSlope())
+            {
+                float slopeAngle = Vector3.Angle(Vector3.up, slopeHit.normal);
+                float slopeAngleIncrease = 1 + (slopeAngle / 90f);
+
+                time += Time.deltaTime * speedIncreaseMultiplier * slopeIncreaseMultiplier * slopeAngleIncrease;
+            }
+            else
+                time += Time.deltaTime * speedIncreaseMultiplier;
+            
             yield return null;
         }
 
