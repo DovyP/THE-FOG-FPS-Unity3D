@@ -55,7 +55,6 @@ public class Throwing : MonoBehaviour
 
         // add force
         Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
-
         projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
 
         totalThrows--;
